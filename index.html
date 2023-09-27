@@ -1,1 +1,215 @@
-Hello World
+<!DOCTYPE HTML>
+<!--
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Utility-based Adaptive Teaching Strategies using Bayesian Theory of Mind</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Remove navigation links and pagination */
+        #nav, footer { display: none; }
+
+        /* Style for the h1 element in the intro */
+        #intro h1 {
+            font-size: 40px; /* Adjust the font size as needed */
+        }
+
+    .different-style {
+        font-weight: bold;
+        color: blue;
+        /* Add any other styling you want here */
+    }
+
+    .bold-style {
+        font-weight: bold;
+        color: black;
+        /* Add any other styling you want here */
+    }
+
+    .left-header {
+        flex: 1; /* Let the header take up available space */
+        padding: 20px; /* Add spacing for readability */
+        align-items: left;
+    }
+
+    .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh; /* This ensures the container takes the full viewport height */
+    }
+
+    </style>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+
+    <!-- Intro -->
+    <div id="intro">
+        <h1>Utility-based Adaptive Teaching Strategies using Bayesian Theory of Mind</h1>
+        <p>Good teachers always tailor their explanations to the learners. Cognitive scientists model this process under the rationality principle: 
+			teachers try to maximise the learner's utility while minimising teaching costs. To this end, human teachers seem to build mental models 
+			of the learner's internal state, a capacity known as Theory of Mind (ToM). Inspired by cognitive science, we build on Bayesian ToM mechanisms 
+			to design machine teachers that, like humans, tailor their teaching strategies to the learners. Our ToM-equipped teachers construct models of 
+			learners' internal states from observations and leverage them to select demonstrations that maximise the learners' rewards while minimising teaching costs. 
+			Our experiments in simulated environments demonstrate that learners taught this way are more efficient than those taught in a learner-agnostic way. 
+			This effect gets stronger when the teacher's model of the learner better aligns with the actual learner's state, either using a more accurate prior or 
+			after accumulating observations of the learner's behaviour. This work is a first step towards social machines that teach us and each other. 
+			</p>
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Featured Post -->
+        <article class="post featured">
+            <header class="major">
+                <span class="date">September 28, 2023</span>
+                <h2><a href="#">Tailoring teaching <br> with ToM</a></h2>
+                <p> We introduce teacher agents that are 
+					endowed with a Theory of Mind (ToM) model of the learner's 
+					internal state, including its goal and receptive field size. 
+					These teacher agents leverage past observations of the learner's behaviour
+					to tailor their demonstrations to suit the specific observed learner. </p>
+            </header>
+            <a href="#" class="image main"><img src="images/setup_internal_state.png" alt="" /></a>
+        </article>
+
+        <!-- Posts -->
+        <section class="posts">
+			<header>
+				<h2><a href="#">Learner<br />
+					</a></h2>
+					<p>The learner needs to open a door of colour defined by its goal, 
+						in the minimum amount of time. It can only see part of its surroundings 
+						through a limited field of view. The goal and the size of the receptive 
+                        field can vary among different learners.
+					</p> 
+					<a href="#"><img src="images/learner_legend.png" alt="" /></a>
+			</header>
+            <article>
+				<header>
+					<h2><a href="#">Teacher<br />
+						</a></h2>
+						<p>The teacher needs to help the learner achieve its goal by providing it a demonstration. 
+							Longer demonstrations are costlier, so the teacher must strike a balance between 
+							ensuring the learner's success while minimizing the cost.
+						</p><br>
+				</header>
+                <a href="#"><img src="images/teacher_legend.png" alt="" /></a>
+            </article>
+            <!-- Add more articles as needed -->
+        </section>
+
+	<!-- Featured Post -->
+	<article class="post featured">
+		<header>
+			<h2><a href="#">Environments for 2D navigation task</a></h2>
+			<p>The general framework consists of two environments from <a href="https://minigrid.farama.org/"><span class="different-style">Minigrid</span></a> library: an easy-to-solve observation environment and a more complex demonstration environment where some learners, without assistance, cannot achieve their goals.</p>
+		</header>
+		<a href="#"><img src="images/environments.png" alt="" width="1000" height="470" /></a>
+	</article>
+
+    <article class="post featured">
+        <header>
+            <h2><a href="#">(A) Observation</a></h2>
+            <p>The teacher observes the learner in a simple environment and updates its Bayesian ToM 
+                model (i.e. probability map) of the learner's internal state, including the learner's <span class="bold-style">goal</span> and <span class="bold-style">receptive field</span>.</p>
+        </header>
+        <div class="video-container">
+            <video width="1200" height="770" autoplay muted loop id="myVideo">
+                <source src="images/video3_comments_bis.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </article>
+
+    <article class="post featured">
+        <header>
+            <h2><a href="#">(B) Demonstration selection </a></h2>
+            <p>From its final belief, the teacher predicts the reward that the learner would receive after observing demonstrations from a provided dataset. 
+                The teacher selects the demonstration maximising the estimated utility that is the estimated reward of the learner minus the teaching cost of the demonstrations.
+                The learner observes the demonstration selected by the teacher and acquires new information about the complex environment. </p>
+        </header>
+        <div class="video-container">
+            <video width="1300" height="770" autoplay muted loop>
+                <source src="images/video4_comments.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </article>
+
+    <article class="post featured">
+        <header>
+            <h2><a href="#">(C) Evaluation </a></h2>
+            <p>After having observed the demonstration selected by the teacher, the learner behaves in the complex environment and get a reward.
+                The teacher is evaluated on the learner's reward minus the cost of providing the selected demonstration.</p>
+        </header>
+        <div class="video-container">
+            <video width="1250" height="800" autoplay muted loop>
+                <source src="images/video5_comments.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </article>
+
+    <article class="post featured">
+        <header>
+            <h1><a href="#" class="left-header">Our work</a></h1>
+            <p>In our paper, we compare the utility of demonstrations selected by ToM-teachers with demonstrations selected 
+                by teachers who use learner-agnostic approaches. Learner-agnostic teachers do not leverage the observations of the learner's 
+                behaviour in the simple environment to tailor their demonstration selections to the specific observed learner. We also
+                 investigate the limits of ToM-teachers' ability to recover the actual learner's internal state, either due to inaccurate priors 
+                 about the learner's behavioural policy or limited observation of the learner's 
+                 behaviour in the simple environment.</p>
+        </header>
+    </article>
+
+
+
+    </div>
+
+    <!-- Copyright -->
+    <div id="copyright">
+        <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script>
+    // Add JavaScript to play the video on hover
+    document.querySelector('.video-container').addEventListener('mouseenter', function() {
+        const video = this.querySelector('video');
+        if (video) {
+            video.play();
+        }
+    });
+</script>
+
+<script>
+    // Get the video element
+    var video = document.getElementById("myVideo");
+
+    // Set the playback rate (0.5 for half speed, 1 for normal speed, etc.)
+    video.playbackRate = 0.45; // Adjust the value as needed
+</script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>
