@@ -17,16 +17,11 @@ In this paper, we introduce machine teachers equipped with a Bayesian Theory of 
 **(C)** The teachers are evaluated based on the utility measured from the demonstration they select for the learner they have observed.
 
 
-
 ## Reproducibility
 
-The 'notebooks' folder contains three Jupyter notebooks that can be used to reproduce the results of the paper:
+The source code can be found in the repository:
 
-- **'experiments_Bayesian.ipynb'**: This notebook presents the environments, various learners, and ToM-teachers, as well as a complete interaction in two different environments.
-
-- **'stat_utility.ipynb'**: In this notebook, you will find the statistical tests used to compute the main results of the paper. The outputs of the statistical tests are saved in the 'outputs' folder. To generate the figures of the main paper and Appendix (F), simply run the cells in the 'Display results' section of the notebook.
-
-- **'stat_ToM.ipynb'**: This notebook contains the statistical tests used to generate the results presented in Appendix D. To generate the figures of the paper, run the cells in the 'Display results' section of the notebook.
+[https://github.com/teacher-with-ToM/Utility-based_Adaptive_teaching.git](https://github.com/teacher-with-ToM/Utility-based_Adaptive_teaching.git)
 
 
 Credits:
