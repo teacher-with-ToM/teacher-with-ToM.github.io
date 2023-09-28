@@ -32,6 +32,12 @@
         /* Add any other styling you want here */
     }
 
+    .white-style {
+        font-weight: bold;
+        color: white;
+        /* Add any other styling you want here */
+    }
+
     .left-header {
         flex: 1; /* Let the header take up available space */
         padding: 20px; /* Add spacing for readability */
@@ -45,10 +51,10 @@
     /*height: 100vh; /* This ensures the container takes the full viewport height */
     }
 
-        .video-container {
-        position: relative;
-        overflow: hidden;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+    .video-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
     }
 
     .responsive-video {
@@ -58,6 +64,15 @@
         width: 100%;
         height: 100%;
     }
+
+    .small-space {
+    margin-bottom: 5px; /* Adjust the value to control the space */
+    }
+
+    .small-line-height {
+    line-height: 1; /* Adjust the value to control the line height */
+}
+
 
 
     </style>
@@ -116,8 +131,8 @@
 						</a></h2>
 						<p>The teacher needs to help the learner achieve its goal by providing it a demonstration. 
 							Longer demonstrations are costlier, so the teacher must strike a balance between 
-							ensuring the learner's success while minimizing the cost.
-						</p><br>
+							ensuring the learner's success while minimizing the cost. <span class="white-style">goal</span></p>
+						</p>
 				</header>
                 <a href="#" class="image main"><img src="images/teacher_legend.png" alt="" /></a>
             </article>
