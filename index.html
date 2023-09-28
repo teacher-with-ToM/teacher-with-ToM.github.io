@@ -45,6 +45,21 @@
     /*height: 100vh; /* This ensures the container takes the full viewport height */
     }
 
+        .video-container {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+    }
+
+    .responsive-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
     </style>
 </head>
 <body class="is-preload">
@@ -93,7 +108,7 @@
 						through a limited field of view. The goal and the size of the receptive 
                         field can vary among different learners.
 					</p> 
-					<a href="#"><img src="images/learner_legend.png" alt="" /></a>
+					<a href="#" class="image main"><img src="images/learner_legend.png" alt="" /></a>
 			</header>
             <article>
 				<header>
@@ -104,7 +119,7 @@
 							ensuring the learner's success while minimizing the cost.
 						</p><br>
 				</header>
-                <a href="#"><img src="images/teacher_legend.png" alt="" /></a>
+                <a href="#" class="image main"><img src="images/teacher_legend.png" alt="" /></a>
             </article>
             <!-- Add more articles as needed -->
         </section>
@@ -115,22 +130,24 @@
 			<h2><a href="#">Environments for 2D navigation task</a></h2>
 			<p>The general framework consists of two environments from <a href="https://minigrid.farama.org/"><span class="different-style">Minigrid</span></a> library: an easy-to-solve observation environment and a more complex demonstration environment where some learners, without assistance, cannot achieve their goals.</p>
 		</header>
-		<a href="#"><img src="images/environments.png" alt="" width="1000" height="470" /></a>
+		<a href="#" class="image main"><img src="images/environments.png" alt="" width="1000" height="470" /></a>
 	</article>
 
     <article class="post featured">
         <header>
             <h2><a href="#">(A) Observation</a></h2>
             <p>The teacher observes the learner in a simple environment and updates its Bayesian ToM 
-                model (i.e. probability map) of the learner's internal state, including the learner's <span class="bold-style">goal</span> and <span class="bold-style">receptive field</span>.</p>
+                model (i.e., probability map) of the learner's internal state, including the learner's <span class="bold-style">goal</span> and <span class="bold-style">receptive field</span>.
+            </p>
         </header>
         <div class="video-container">
-            <video width="1200" height="770" autoplay muted loop id="myVideo">
+            <video class="responsive-video" autoplay muted loop id="myVideo">
                 <source src="images/video3_comments_bis.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
     </article>
+    
 
     <article class="post featured">
         <header>
@@ -140,7 +157,7 @@
                 The learner observes the demonstration selected by the teacher and acquires new information about the complex environment. </p>
         </header>
         <div class="video-container">
-            <video width="1300" height="770" autoplay muted loop>
+            <video class="responsive-video" autoplay muted loop id="myVideo">
                 <source src="images/video4_comments.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -154,7 +171,7 @@
                 The teacher is evaluated on the learner's reward minus the cost of providing the selected demonstration.</p>
         </header>
         <div class="video-container">
-            <video width="1250" height="800" autoplay muted loop>
+            <video class="responsive-video" autoplay muted loop id="myVideo">
                 <source src="images/video5_comments.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
