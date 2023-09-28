@@ -6,7 +6,7 @@ This repository contains the [webpage](https://teacher-with-tom.github.io./) ðŸŒ
 
 The source code can be found in the repository:
 
-[https://github.com/teacher-with-ToM/Utility-based_Adaptive_teaching.git](https://github.com/teacher-with-ToM/Utility-based_Adaptive_teaching.git)
+[https://github.com/teacher-with-ToM/Utility-based_Adaptive_teaching.git](https://github.com/teacher-with-ToM/Utility_based_Adaptive_teaching.git)
 
 
 Credits:
